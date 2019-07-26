@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<title>Food around the worlds</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("food.jpg");
+  min-height: 80%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="mainpage.html" class="w3-button w3-block w3-black">EXPLORE</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="quiz.html" class="w3-button w3-block w3-black">QUIZ</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">WHERE</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Always accessible! </span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">Food <br>Exploration!</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">500 Paula Ave.</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">HOW TO EXPLORE</span></h5>
+    <p>To explore what the most popular foods and beautiul places of each country, click on the EXPLORE page to discover new things.</p>
+    <p>In addition to the explore page, we also have a QUIZ page where you can discover your unknown food interests!</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>“I love you like a fat kid loves cake!” </i></p>
+      <p>- Scott Adams</p>
+    </div>
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHAT YOU WILL FIND ON EACH PAGE</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Explore Page</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Quiz Page</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Japan</h5>
+      <p class="w3-text-grey">You will find delicious foods as well as beautiul places with scenery you can't find anywhere else.</p><br>
+    
+      <h5>South Korea</h5>
+      <p class="w3-text-grey">In South Korea, you will find the most traditional foods that will blow your minds away. </p><br>
+    
+      <h5>France</h5>
+      <p class="w3-text-grey">Here, you will find the most exotic, but amazing foods of this amazing country. You will also be introucted to the main tourist attractions too. </p><br>
+    
+      <h5>Italy</h5>
+      <p class="w3-text-grey">You will see many beautiful examples of the food made in Italy as well as the awesome scenery Italy has to offer. </p><br>
+    
+      <h5>Netherlands</h5>
+      <p class="w3-text-grey">The absolutely beautiful scenery in this country is a sight to behold as well as the food they have to offer. </p>
+
+      <h5>Another country</h5>
+      <p class="w3-text-grey">Still working on it.</p>
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>What is the quiz?</h5>
+      <p>Take the quiz to find out which foods yare best suited for you. Live a little! You will surprise yourself with the foods you will find and surprisingly enjoy. </p><br>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by <a href="" title="us" target="_blank" class="w3-hover-text-green">us</a></p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
